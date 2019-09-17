@@ -1,0 +1,18 @@
+function [E] = myDoubleThresholding(I, high, low)
+[n,m]=size(I);
+E=zeros(n,m);
+high =high*max(I,'all');
+low =low* max(I,'all');
+for i=1 : n
+    for j=1 : m
+        if(I(i,j)> high) 
+            E(i,j)= 1;
+        elseif((I(i,j)>low) ||
+            E(i,j)=0;
+        end
+    end   
+end
+
+      
+            
+        
